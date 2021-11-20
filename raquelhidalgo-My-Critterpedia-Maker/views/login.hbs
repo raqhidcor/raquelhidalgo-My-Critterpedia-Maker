@@ -1,0 +1,24 @@
+<div class="container">
+
+{{!-- <h2>My Critterpedia Maker</h2> --}}
+<form action="/auth/login" method="POST">
+   <label> Username
+      <input type="text" name="username" placeholder="Isabelle">
+   </label>
+   <label> Password
+      <input type="password" name="password" placeholder="Welcome1234">
+   </label>
+   </form>
+
+<div class = "buttons">
+   <button class= "login-button" type="submit"> Log In</button>
+</div>
+
+<img class="canela" src="../images/canela.png"/> 
+
+</div>
+
+
+{{#if errorMessage}}
+   {{errorMessage}}
+{{/if}}

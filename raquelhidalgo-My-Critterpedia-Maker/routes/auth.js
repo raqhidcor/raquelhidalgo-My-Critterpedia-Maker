@@ -15,7 +15,7 @@ const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
 router.get("/signup", isLoggedOut, (req, res) => {
-  res.render("auth/signup");
+  res.render("signup");
 });
 
 router.post("/signup", isLoggedOut, (req, res) => {
@@ -24,7 +24,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
   if (!username) {
     return res
       .status(400)
-      .render("auth/signup", { errorMessage: "Please provide your username." });
+      .render("signup", { errorMessage: "Please provide your username." });
   }
 
   if (password.length < 8) {
@@ -51,7 +51,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
     if (found) {
       return res
         .status(400)
-        .render("auth.signup", { errorMessage: "Username already taken." });
+        .render("signup", { errorMessage: "Username already taken." });
     }
 
     // if user is not found, create a new user - start with hashing the password
@@ -74,7 +74,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
         if (error instanceof mongoose.Error.ValidationError) {
           return res
             .status(400)
-            .render("auth/signup", { errorMessage: error.message });
+            .render("signup", { errorMessage: error.message });
         }
         if (error.code === 11000) {
           return res.status(400).render("auth/signup", {
@@ -84,13 +84,13 @@ router.post("/signup", isLoggedOut, (req, res) => {
         }
         return res
           .status(500)
-          .render("auth/signup", { errorMessage: error.message });
+          .render("signup", { errorMessage: error.message });
       });
   });
 });
 
 router.get("/login", isLoggedOut, (req, res) => {
-  res.render("auth/login");
+  res.render("login");
 });
 
 router.post("/login", isLoggedOut, (req, res, next) => {
@@ -99,7 +99,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
   if (!username) {
     return res
       .status(400)
-      .render("auth/login", { errorMessage: "Please provide your username." });
+      .render("login", { errorMessage: "Please provide your username." });
   }
 
   // Here we use the same logic as above
@@ -117,7 +117,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
       if (!user) {
         return res
           .status(400)
-          .render("auth/login", { errorMessage: "Wrong credentials." });
+          .render("login", { errorMessage: "Wrong credentials." });
       }
 
       // If user is found based on the username, check if the in putted password matches the one saved in the database
@@ -125,7 +125,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
         if (!isSamePassword) {
           return res
             .status(400)
-            .render("auth/login", { errorMessage: "Wrong credentials." });
+            .render("login", { errorMessage: "Wrong credentials." });
         }
         req.session.user = user;
         // req.session.user = user._id; // ! better and safer but in this case we saving the entire user object
@@ -146,7 +146,7 @@ router.get("/logout", isLoggedIn, (req, res) => {
     if (err) {
       return res
         .status(500)
-        .render("auth/logout", { errorMessage: err.message });
+        .render("logout", { errorMessage: err.message });
     }
     res.redirect("/");
   });

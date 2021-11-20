@@ -1,12 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Henny+Penny&family=Indie+Flower&family=Open+Sans:wght@300&family=Quantico&family=Taviraj:wght@100&display=swap');
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0px;
+  font: 14px Comfortaa;
+  margin:0px;
+  background-image: url("../images/background.jpeg");
 }
 
-a {
-  color: #00b7ff;
+/* navbar */
+
+.navbar {
+  background-color: rgb(174, 104,66);
+  font-size: 20px;
 }
 
-h1 {
-  color: 15px;
+.nav-leaf{
+  width: 70px;
+  height: 50px;
 }
+
+
+/*  index home page */
+
+.index-text{
+  display: flex;
+  text-align: center;
+}
+
+.home-img{
+  width: 320px;
+  border-radius: 50px;
+
+}
+
+.buttons{
+	display:flex;
+	flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.buttons  a {
+	border-radius: 50%;
+	text-decoration: none;
+  background-color: rgb(174, 104,66);
+	color: black;
+	font-size: 22px;
+	padding: 14px 14px;
+	box-shadow: 0px 0px 10px #0a0a0a4f;
+	margin: 10px;
+}
+
+/* login page & form */
+
+label{
+  font-size: 20px;
+}
+
+.login-button{
+  border-radius: 50%;
+	text-decoration: none;
+  background-color: rgb(174, 104,66);
+	color: black;
+  font-size: 22px;
+	padding: 14px 14px;
+	box-shadow: 0px 0px 10px #0a0a0a4f;
+	margin: 10px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.canela{
+  width: 320px;
+}
+
