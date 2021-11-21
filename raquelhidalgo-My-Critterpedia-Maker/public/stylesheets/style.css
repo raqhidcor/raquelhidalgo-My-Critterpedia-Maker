@@ -11,7 +11,7 @@ body {
 
 .navbar {
   background-color: rgb(174, 104,66);
-  font-size: 20px;
+  font-size: 21px;
 }
 
 .nav-leaf{
@@ -28,7 +28,7 @@ body {
 }
 
 .home-img{
-  width: 320px;
+  width: 450px;
   border-radius: 50px;
 
 }
@@ -80,3 +80,40 @@ label{
   width: 320px;
 }
 
+/* signup page & form */
+
+.signup-container {
+  text-align: center;
+  width: fit-content;
+  margin: 48px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
+form {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form input {
+  margin:16px 0;
+  padding: 0;
+}
+
+.signup-button{
+  border-radius: 50%;
+	text-decoration: none;
+  background-color: rgb(174, 104,66);
+	color: black;
+  font-size: 22px;
+	padding: 14px 14px;
+	box-shadow: 0px 0px 10px #0a0a0a4f;
+	margin: 10px;
+}
+
+.signup-img{
+  width: 450px;
+  border-radius: 50px;
+}
