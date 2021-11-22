@@ -52,6 +52,10 @@ body {
 	margin: 10px;
 }
 
+.logout-msg{
+  font-size: 20px;
+}
+
 /* login page & form */
 
 label{
@@ -74,6 +78,10 @@ label{
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
+}
+
+.login-error{
+  font-size: 20px;
 }
 
 .canela{
@@ -113,7 +121,20 @@ form input {
 	margin: 10px;
 }
 
+.singup-error{
+  font-size: 20px;
+}
+
 .signup-img{
   width: 450px;
   border-radius: 50px;
 }
+
+
+/* profile page */
+
+.profile-text{
+  margin-top: -100px;
+  text-align: center;
+}
+
