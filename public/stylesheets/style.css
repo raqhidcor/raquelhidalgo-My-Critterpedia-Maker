@@ -153,3 +153,13 @@ form input {
   color: black;
   font-size: 22px;
 }
+
+/* fish page */
+
+.fish{
+  margin-left: 20px;
+}
+
+.btn-creatures{
+  background-color: rgb(174, 104,66);
+}  

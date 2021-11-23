@@ -2,7 +2,9 @@
 
 <div class="container">
 
-<div class="row row-cols-1 row-cols-md-3 g-3" >
+<div class="fish">
+
+<div class="row row-cols-1 row-cols-s-2 row-cols-md-3 g-3" >
 
 {{#each fishInfo}}
   <div class="col" style="width: 10rem">
@@ -10,7 +12,7 @@
     <div class="card-body">
       <h5 class="card-title">{{this.name.name-USen}}</h5>
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#{{this.id}}">
+      <button type="button" class="btn btn-creatures" data-toggle="modal" data-target="#{{this.id}}">
         More info
       </button>
     </div>
