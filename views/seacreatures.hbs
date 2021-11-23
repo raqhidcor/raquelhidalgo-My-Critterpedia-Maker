@@ -1,6 +1,56 @@
 
+
+
+<div class="container">
+
+<div class="sea">
+
+<div class="row row-cols-1 row-cols-s-2 row-cols-md-3 g-3" >
+
 {{#each seaInfo}}
-  <img src="{{this.icon_uri}}"></img>
-  <h2>{{this.name.name-USen}}</h2>
-  <a href="/critter/{{this._id}}">See more</a>
+  <div class="col" style="width: 10rem">
+    <img src="{{this.icon_uri}}"  class="card-img-top" alt="{{this.name.name-USen}}">
+    <div class="card-body text-center">
+      <h5 class="card-title">{{this.name.name-USen}}</h5>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-creatures" data-toggle="modal" data-target="#{{this.id}}">
+        More info
+      </button>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  {{!-- <div class="modal fade black" id="{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{this.name}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src={{this.thumbnail.path}}.{{this.thumbnail.extension}} alt="{{this.name}}">
+          <p>{{this.description}}</p>
+          <p>Comics in which {{this.name}} appears:</p>
+          <ul>
+            {{#each this.comics.items}}
+                <li>{{this.name}}</li>
+            {{/each}}
+          </ul>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <form method="POST" action="/characters/create/{{this.id}}">
+            <button type="submit" class="btn btn-primary">Save to Favorites</button>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div> --}}
 {{/each}}
+
+</div>
+</div>

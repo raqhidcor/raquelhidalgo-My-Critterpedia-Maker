@@ -2,14 +2,14 @@
 
 <div class="container">
 
-<div class="fish">
+<div class="bug">
 
 <div class="row row-cols-1 row-cols-s-2 row-cols-md-3 g-3" >
 
 {{#each fishInfo}}
   <div class="col" style="width: 10rem">
     <img src="{{this.icon_uri}}"  class="card-img-top" alt="{{this.name.name-USen}}">
-    <div class="card-body">
+    <div class="card-body text-center">
       <h5 class="card-title">{{this.name.name-USen}}</h5>
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-creatures" data-toggle="modal" data-target="#{{this.id}}">

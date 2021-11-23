@@ -140,6 +140,11 @@ form input {
 
 /* critters page */
 
+/* .critters-page{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+} */
 
 .critters-buttons{
   border-radius: 50%;
@@ -163,3 +168,15 @@ form input {
 .btn-creatures{
   background-color: rgb(174, 104,66);
 }  
+
+/* bugs page */
+
+.bug{
+  margin-left: 30px;
+}
+
+/* sea page */
+
+.sea{
+  margin-left: 30px;
+}
