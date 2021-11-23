@@ -138,3 +138,19 @@ form input {
   text-align: center;
 }
 
+/* critters page */
+
+
+.critters-buttons{
+  border-radius: 50%;
+  background-color: rgb(174, 104,66);
+	padding: 14px 14px;
+	box-shadow: 0px 0px 10px #0a0a0a4f;
+	margin: 10px;
+}
+
+.critters-buttons a{
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+}

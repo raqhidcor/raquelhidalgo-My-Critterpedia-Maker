@@ -29,7 +29,7 @@ router.get("/critters", isLoggedIn, async (req, res) => {
   try {
     const axiosCall = await axios(`http://acnhapi.com/v1/fish/`)
     const fishInfo = axiosCall.data;
-    console.log (fishInfo)
+    // console.log (fishInfo)
     res.render("./critters.hbs", { fishInfo });
   } catch (err) {
     console.log(chalk.bgRed(err));
