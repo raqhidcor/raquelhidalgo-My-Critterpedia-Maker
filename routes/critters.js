@@ -20,21 +20,21 @@ const User = require("../models/User.model");
 //My own middleware
 const isLoggedIn = require("../middleware/isLoggedIn")
 
-// router.get("/critters", isLoggedIn ,(req, res, next) => {
-//   const loggedUser = req.session.loggedUser
-//   res.render("critters");
-// });
-
-router.get("/critters", isLoggedIn, async (req, res) => {
-  try {
-    const axiosCall = await axios(`http://acnhapi.com/v1/fish/`)
-    const fishInfo = axiosCall.data;
-    // console.log (fishInfo)
-    res.render("./critters.hbs", { fishInfo });
-  } catch (err) {
-    console.log(chalk.bgRed(err));
-  }
+router.get("/critters", isLoggedIn ,(req, res, next) => {
+  const loggedUser = req.session.loggedUser
+  res.render("critters");
 });
+
+// router.get("/critters", isLoggedIn, async (req, res) => {
+//   try {
+//     const axiosCall = await axios(`http://acnhapi.com/v1/fish/`)
+//     const fishInfo = axiosCall.data;
+//     // console.log (fishInfo)
+//     res.render("./critters.hbs", { fishInfo });
+//   } catch (err) {
+//     console.log(chalk.bgRed(err));
+//   }
+// });
 
 // router.post("/create/:id", async (req, res) => {
 //   const axiosCall = await axios(

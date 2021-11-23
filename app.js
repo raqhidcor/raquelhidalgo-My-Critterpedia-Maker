@@ -33,6 +33,15 @@ app.use("/", auth);
 const critters = require("./routes/critters");
 app.use("/",critters)
 
+const fish = require("./routes/fish");
+app.use("/",fish)
+
+const bugs = require("./routes/bugs");
+app.use("/",bugs)
+
+const sea = require("./routes/seacreatures");
+app.use("/",sea)
+
 const profile = require("./routes/profile");
 app.use("/",profile)
 
