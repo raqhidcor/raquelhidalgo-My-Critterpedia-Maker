@@ -1,8 +1,7 @@
-<h1>yeiii</h1>
 
-{{#each critters}}
-  <img src="{{this.image}}"></img>
-  <h2>{{this.name}}</h2>
+{{#each fishInfo}}
+  <img src="{{this.icon_uri}}"></img>
+  <h2>{{this.name.name-USen}}</h2>
   <a href="/critter/{{this._id}}">See more</a>
 {{/each}}
 

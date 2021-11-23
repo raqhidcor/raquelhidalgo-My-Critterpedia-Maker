@@ -28,9 +28,9 @@ const isLoggedIn = require("../middleware/isLoggedIn")
 router.get("/critters", isLoggedIn, async (req, res) => {
   try {
     const axiosCall = await axios(`http://acnhapi.com/v1/fish/`)
-    const crittersInfo = axiosCall.data.results;
-    console.log (crittersInfo)
-    res.render("./critters.hbs", { crittersInfo });
+    const fishInfo = axiosCall.data;
+    console.log (fishInfo)
+    res.render("./critters.hbs", { fishInfo });
   } catch (err) {
     console.log(chalk.bgRed(err));
   }
