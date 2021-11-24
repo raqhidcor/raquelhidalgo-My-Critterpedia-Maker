@@ -140,23 +140,26 @@ form input {
 
 /* critters page */
 
-/* .critters-page{
+.critters-page{
   display: flex;
-  flex-direction: row;
-  align-items: center;
-} */
-
-.critters-buttons{
-  border-radius: 50%;
-  background-color: rgb(174, 104,66);
-	padding: 14px 14px;
-	margin: 10px;
+  align-items:flex-end;
+  justify-content: space-around;
+  margin-top: 200px;
 }
 
-.critters-buttons a{
-  text-decoration: none;
-  color: black;
-  font-size: 22px;
+.link-icons1{
+  width: 120px;
+
+}
+
+.link-icons2{
+  width: 90px;
+
+}
+
+.link-icons3{
+  width: 80px;
+
 }
 
 /* fish page */
