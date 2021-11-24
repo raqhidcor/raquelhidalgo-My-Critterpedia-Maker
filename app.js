@@ -13,10 +13,10 @@ const express = require("express");
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
 
-hbs.registerHelper('formatUrl' , (url) =>{
+// hbs.registerHelper('formatUrl' , (url) =>{
 
-    return url.replace('https', 'http')
-})
+//     return url.replace('https', 'http')
+// })
 
 const app = express();
 

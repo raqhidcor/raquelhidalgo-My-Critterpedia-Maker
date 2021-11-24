@@ -89,6 +89,12 @@ label{
   width: 320px;
 }
 
+.signup-link{
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
 /* signup page & form */
 
 .signup-container {
@@ -131,12 +137,34 @@ form input {
   border-radius: 50px;
 }
 
+.login-link{
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+
 
 /* profile page */
 
 .profile-text{
   margin-top: -100px;
   text-align: center;
+}
+
+.profile-img{
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+}
+
+.profile-p-text{
+  text-decoration: none;
+  color:black;
+  font-size: 22px;
+
+  
 }
 
 /* critters page */
