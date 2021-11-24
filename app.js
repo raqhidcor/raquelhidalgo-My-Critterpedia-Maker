@@ -50,6 +50,12 @@ app.use("/",sea)
 const profile = require("./routes/profile");
 app.use("/",profile)
 
+const catched = require("./routes/catched");
+app.use("/",catched)
+
+const toCatch = require ("./routes/toCatch");
+app.use("/",toCatch)
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 

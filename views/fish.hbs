@@ -30,14 +30,18 @@
           </button>
         </div>
         <div class="modal-body">   
-          <img class="modal-img" src={{this.image_uri}} alt="{{this.name.name-USen}}">
+          <img src={{this.image_uri}} alt="{{this.name.name-USen}}">
           <p> Location: {{this.availability.location}}</p>
           <p> Rarity: {{this.availability.rarity}}</p>
+          <p> Shadow: {{this.shadow}}</p>
+          <p> Price:  {{this.price}}</p>
+          <p> Museum phrase: {{this.museum-phrase}}</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-creatures" data-dismiss="modal">Close</button>
           <form method="POST" action="/characters/create/{{this.id}}">
-            <button type="submit" class="btn btn-primary">Save to Favorites</button>
+            <button type="submit" class="btn btn-creatures">Catched</button>
+            <button type="submit" class="btn btn-creatures">To catch</button>
           </form>
           
         </div>

@@ -163,8 +163,6 @@ form input {
   text-decoration: none;
   color:black;
   font-size: 22px;
-
-  
 }
 
 /* critters page */
@@ -200,6 +198,18 @@ form input {
 .btn-creatures{
   background-color: rgb(174, 104,66);
 }  
+
+.modal img {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid white;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* bugs page */
 
