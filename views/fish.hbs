@@ -10,7 +10,7 @@
   <div class="col" style="width: 10rem">
     <img src="{{this.icon_uri}}"  class="card-img-top" alt="{{this.name.name-USen}}">
     <div class="card-body text-center">
-      <h5 class="card-title">{{this.name.name-USen}}</h5>
+      {{!-- <h5 class="card-title">{{this.name.name-USen}}</h5> --}}
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-creatures" data-toggle="modal" data-target="#{{this.id}}">
         More info
@@ -18,26 +18,21 @@
     </div>
   </div>
   
-  <!-- Modal -->
-  {{!-- <div class="modal fade black" id="{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <!-- Modal -->
+  
+  <div class="modal fade black" id="{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">{{this.name}}</h5>
+          <h5 class="modal-title" id="exampleModalLabel">{{this.name.name-USen}}</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <img src={{this.thumbnail.path}}.{{this.thumbnail.extension}} alt="{{this.name}}">
-          <p>{{this.description}}</p>
-          <p>Comics in which {{this.name}} appears:</p>
-          <ul>
-            {{#each this.comics.items}}
-                <li>{{this.name}}</li>
-            {{/each}}
-          </ul>
-          
+          <img class="modal-img" src={{this.image_uri}} alt="{{this.name.name-USen}}">
+          <p> Location: {{this.availability.location}}</p>
+          <p> Rarity: {{this.availability.rarity}}</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -48,7 +43,7 @@
         </div>
       </div>
     </div>
-  </div> --}}
+  </div> 
 {{/each}}
 
 </div>
