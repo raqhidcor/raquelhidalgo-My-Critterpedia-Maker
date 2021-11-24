@@ -13,6 +13,11 @@ const express = require("express");
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
 
+hbs.registerHelper('formatUrl' , (url) =>{
+
+    return url.replace('https', 'http')
+})
+
 const app = express();
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware

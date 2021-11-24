@@ -29,8 +29,8 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-          <img class="modal-img" src={{this.image_uri}} alt="{{this.name.name-USen}}">
+        <div class="modal-body">   
+          <img class="modal-img" src={{#formatUrl this.image_uri}} alt="{{this.name.name-USen}}">
           <p> Location: {{this.availability.location}}</p>
           <p> Rarity: {{this.availability.rarity}}</p>
         </div>
