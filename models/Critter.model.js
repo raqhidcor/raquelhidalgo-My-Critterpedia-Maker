@@ -5,7 +5,9 @@ const critterSchema = new Schema(
       name: {type:String,required:true},
       location: {type:String, required:true},
       rarity: {type:String,required:true},
-      catchPhrase: {type:String},
+      shadow: {type:String},
+      price: {type:Number},
+      museumPhrase: {type:String},
       image: {type:String}
     },
     { timestamps: true }
