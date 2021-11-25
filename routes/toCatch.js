@@ -8,12 +8,30 @@ const User = require("../models/User.model");
 //My own middleware
 const isLoggedIn = require("../middleware/isLoggedIn");
 
+//Create toCatch route
+
 router.get("/toCatch", isLoggedIn,async (req, res, next) => {
 
   const loggedUser = req.session.loggedUser;
   const currUsr = await User.findById(loggedUser._id).populate('crittersToCatch')
   res.render("toCatched" , {critters: currUsr.crittersToCatch});
 });
+
+
+// Delete critter in toCatch
+
+router.post("/toCatch/delete/:id", async (req, res) => { 
+  try{
+      await Critter.findByIdAndDelete(req.params.id)
+      await User.findByIdAndUpdate(req.session.loggedUser._id, {$pull: {crittersToCatch: req.params.id}},);
+  }catch(err){
+    console.log(err)
+  }
+  res.redirect(`/toCatch`)
+});
+
+
+//Create critter in toCatch 
 
 router.post("/toCatch/:type/:id", async (req, res) => {
     try {

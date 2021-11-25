@@ -224,4 +224,18 @@ form input {
   margin-left: 30px;
 }
 
+/* catched and to catch pages */
 
+.cards{
+  display: flex;
+  flex-direction: row;
+}
+
+.card{
+  background-color: rgb(250, 247, 185);
+}
+
+.card-title{
+  text-align: center;
+
+}
