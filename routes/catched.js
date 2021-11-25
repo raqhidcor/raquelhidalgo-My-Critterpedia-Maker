@@ -6,41 +6,46 @@ const Critter = require("../models/Critter.model");
 const User = require("../models/User.model");
 
 //My own middleware
-const isLoggedIn = require("../middleware/isLoggedIn")
+const isLoggedIn = require("../middleware/isLoggedIn");
 
-router.get("/catched", isLoggedIn ,(req, res, next) => {
-  const loggedUser = req.session.loggedUser
-  res.render("catched");
+router.get("/catched", isLoggedIn,async (req, res, next) => {
+
+  const loggedUser = req.session.loggedUser;
+  const currUsr = await User.findById(loggedUser._id).populate('crittersCatched')
+  res.render("catched" , {critters: currUsr.crittersCatched});
 });
 
-router.post("/catched/:id", async (req, res) => {
-  try{
-    const axiosCall = await axios(`http://acnhapi.com/v1/fish/${req.params.id}`)
-
-    const infoFromFish = axiosCall.data
-      
-    const dataToUpload = {
-      name: infoFromFish.name.name-USen,  
-      location: infoFromFish.availability.location,
-      rarity: infoFromFish.availability.rarity,
-      shadow: infoFromFish.shadow,
-      price: infoFromFish.price,
-      museumPhrase: infoFromFish.museum-phrase,
-      image: infoFromFish.image_uri,
-    }
-  
-      const fishToCatch = await Fish.create(dataToUpload)
-  
-      await User.findByIdAndUpdate(req.session.loggedUser._id,
-        {$push: {critters: fishToCatch._id}},
-        {new: true}
+router.post("/catched/:type/:id", async (req, res) => {
+    try {
+      const axiosCall = await axios(
+        `http://acnhapi.com/v1/${req.params.type}/${req.params.id}`
       );
-  
-      res.redirect('/catched')
-      } catch(err){
-          console.log ("Error",err)
-      }
-  });
-  
+
+      const info = axiosCall.data;
+
+      const dataToUpload = {
+        name: info.name["name-USen"],
+        location: info.availability.location,
+        rarity: info.availability.rarity,
+        shadow: info.shadow,
+        price: info.price,
+        museumPhrase: info["museum-phrase"],
+        image: info.image_uri,
+      };
+
+      const critterCatched = await Critter.create(dataToUpload);
+
+      await User.findByIdAndUpdate(
+        req.session.loggedUser._id,
+        { $push: { crittersCatched: critterCatched._id } },
+        { new: true }
+      );
+      res.redirect("/catched");
+    } catch (err) {
+      console.log("Error", err);
+    }
+
+});
+
 
 module.exports = router;

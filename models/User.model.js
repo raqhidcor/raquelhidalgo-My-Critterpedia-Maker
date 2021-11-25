@@ -12,8 +12,8 @@ const userSchema = new Schema(
       required: [true, "Can't be blank"],
       match: [/\S+@\S+\.\S+/, "Email not valid"]
     },
-    crittersCatched: [{type:Schema.Types.ObjectId,ref:"crittersCatched"}],
-    crittersToCatch: [{type:Schema.Types.ObjectId, ref:"CrittersToCatch"}]
+    crittersCatched: [{type:Schema.Types.ObjectId, ref: "Critter"}],
+    crittersToCatch: [{type:Schema.Types.ObjectId, ref: "Critter"}]
   },
   {timestamps: true}
 );

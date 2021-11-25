@@ -38,13 +38,12 @@
           <p> Museum phrase: {{this.museum-phrase}}</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-creatures" data-dismiss="modal">Close</button>
-          <form method="POST" action="/catched/{{this.id}}">
+          <form method="POST" action="/catched/fish/{{this.id}}">
             <button type="submit" class="btn btn-creatures">Catched</button>
-             <br>
-            <button type="submit" class="btn btn-creatures">To catch</button>
+           </form>  
+           <form method="POST" action="/toCatch/fish/{{this.id}}">  
+           <button type="submit" class="btn btn-creatures">To catch</button>
           </form>
-          
         </div>
       </div>
     </div>
