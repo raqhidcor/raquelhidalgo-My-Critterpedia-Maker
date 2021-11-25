@@ -37,10 +37,10 @@ c
         <div class="modal-footer">
           <form method="POST" action="/catched/bugs/{{this.id}}">
             <button type="submit" class="btn btn-creatures">Catched</button>
-            <br>
-            <button type="submit" class="btn btn-creatures">To catch</button>
           </form>
-          
+          <form method="POST" action="/toCatch/bugs/{{this.id}}">  
+           <button type="submit" class="btn btn-creatures">To catch</button>
+          </form>  
         </div>
       </div>
     </div>

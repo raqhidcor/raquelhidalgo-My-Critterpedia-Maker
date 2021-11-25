@@ -38,11 +38,11 @@
         </div>
         <div class="modal-footer">
           <form method="POST" action="/catched/sea/{{this.id}}">
-            <button type="submit" class="btn btn-creatures">Catched</button>
-            <br>
-            <button type="submit" class="btn btn-creatures">To catch</button>
+            <button type="submit" class="btn btn-creatures">Catched</button>            
           </form>
-          
+          <form method="POST" action="/toCatch/sea/{{this.id}}">  
+           <button type="submit" class="btn btn-creatures">To catch</button>
+          </form>
         </div>
       </div>
     </div>
