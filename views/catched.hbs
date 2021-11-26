@@ -12,12 +12,11 @@
     <img class="card-img-top" src={{image}} alt={{name}}>
     <div class="card-body">
       <h5 class="card-title">{{name}}</h5>
-    </div>
-     <div class="card-body text-center">
-     <button type="button" class="btn btn-creatures" data-toggle="modal" data-target="#{{this.id}}">
+      <div class="card-body text-center">
+      <button type="button" class="btn btn-creatures" data-toggle="modal" data-target="#{{this.id}}">
         More info
       </button>
-    </div>  
+      </div>
     <div class="card-footer">
         <form method="POST" action="/catched/delete/{{id}}">
         <button class="btn btn-creatures"type="submit" id="unFavButton">Remove critter</button>
