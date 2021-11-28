@@ -11,4 +11,6 @@ You can keep track of the critters you catch and those you did not catch YET!
 
 https://my-critterpedia-maker.herokuapp.com/
 
+<div align='center'> 
 <a href="https://www.linkedin.com/in/raquel-hidalgo-corchuelo/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+</div>
