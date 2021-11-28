@@ -5,7 +5,7 @@ https://user-images.githubusercontent.com/90280742/143783985-30e26310-cec6-4492-
 ---
 
 
-My Critterpedia Maker is a web created with ❤️ for all the animal crossing fans. 
+My Critterpedia Maker is a web created with ❤️  for all the animal crossing fans. 
 
 You can keep track of the critters you catch and those you did not catch YET!
 
