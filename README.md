@@ -7,7 +7,7 @@ https://user-images.githubusercontent.com/90280742/151205954-b7916ab9-8757-4c0f-
 
 ---
 
-My Critterpedia Maker is a web created with ❤️  for all the animal crossing fans and my back-end project for the second module at Ironhack's Web Development bootcamp. The website is totally responsive so it can be open across all your devices pc, tablet or mobile phone. 
+My Critterpedia Maker is a web created with ❤️  for all the animal crossing fans and my back-end project for the second module at Ironhack's Web Development bootcamp. The website is fully responsive so it can be open across all your devices pc, tablet or mobile phone. 
 
 I've used firstly Axios to connect with ACNH API; NodeJS and ExpressJs for the routes and server; BcryptJs for authentication; MongoDB for the data base and Handlebars, Bootstrap and CSS3 for the Front.
 
