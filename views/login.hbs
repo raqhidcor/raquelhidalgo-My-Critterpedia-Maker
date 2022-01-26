@@ -1,6 +1,5 @@
 <div class="container">
 
-  {{! <h2>My Critterpedia Maker</h2> }}
   <form action="/login" method="POST">
     <label>
       Username
@@ -10,10 +9,11 @@
       Password
       <input type="password" name="password" placeholder="Welcome1234" />
     </label>
-      <button class="login-button" type="submit"> Log In</button>
+    <button class="login-button" type="submit"> Log In</button>
   </form>
-  <div>Don't have an account? <a class="signup-link" href="/signup">Sign up here</a></div>
- 
+  <div>Don't have an account?
+    <a class="signup-link" href="/signup">Sign up here</a></div>
+
   {{#if msg}}
     <p class="login-error">{{msg}}</p>
   {{/if}}

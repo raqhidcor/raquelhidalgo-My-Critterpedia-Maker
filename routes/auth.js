@@ -14,35 +14,33 @@ const User = require("../models/User.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-
-
-//Renderizar el formulario de sign up
+//Render sign up form
 router.get("/signup", (req, res, next) => {
   res.render("signup");
 });
 
-//Renderizar el formulario de login
+//Render login form
 router.get("/login", (req, res, next) => {
   res.render("login");
 });
 
-//POST para crear un nuevo usuario
+//POST route to create a new user
 router.post("/signup", async (req, res, next) => {
   const { username, email, password, passwordRepeat } = req.body;
 
-  //Verificar que no hay ningún campo vacío
+  //Checks that there is not any blank input
   if (!username || !email || !password || !passwordRepeat) {
     res.render("signup.hbs", { msg: "You need to fill all inputs" });
     return;
   }
 
-  // Compara contraseñas
+  // Compare password
   if (password !== passwordRepeat) {
     res.render("signup.hbs", { msg: "Passwords does not match" });
     return;
   }
 
-  //Verificar que la contraseña tiene mínimo 8 letras
+  //Checks that the password is at least 8 characters long
   if (password.length < 8) {
     res.render("signup.hbs", {
       msg: "Your password should be at least 8 characters long",
@@ -50,19 +48,19 @@ router.post("/signup", async (req, res, next) => {
     return;
   }
 
-  //Verificar que el usuario no existe ya
+  //Checks if the user already has an account
   const existingUser = await User.findOne({ username });
   if (existingUser) {
     res.render("signup", { msg: "This user already has an account" });
     return;
   }
 
-  //Verificar el correcto formato del correo
+  //Checks if the emal format is valid
   if (/\S+@\S+\.\S+/.test(email) === false) {
     res.render("signup", { msg: "Please put a valid email" });
   }
 
-  //Proceso para crear el usuario
+  //Process to create new user
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
     const createdUser = await User.create({
@@ -76,34 +74,34 @@ router.post("/signup", async (req, res, next) => {
   }
 });
 
-//POST para hacer login
+//POST route to login
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
-  //Verificar que ningun campo esta vacio
+  //Checks that there is not any blank input
   if (!username || !password) {
     res.render("login", { msg: "You need to fill all inputs" });
     return;
   }
-  //Verificar si el usuario existe
+  //Checks if the user exists
   const existingUser = await User.findOne({ username: username });
   if (!existingUser) {
     res.render("login", { msg: "User doesn't exist" });
     return;
   }
 
-  //Verificar si la contraseña es correcta
+  //Checks if the password is correct
   const passwordMatch = await bcrypt.compare(password, existingUser.password);
   if (!passwordMatch) {
     res.render("login", { msg: "Incorrect password" });
     return;
   }
-  //Hacer login
+  //To login
   req.session.loggedUser = existingUser;
   console.log("SESSION ====> ,", req.session);
-  res.redirect('/profile') 
+  res.redirect("/profile");
 });
 
-//POST logout
+//POST route logout
 router.get("/logout", async (req, res, next) => {
   res.clearCookie("connect.sid", { path: "/" });
 

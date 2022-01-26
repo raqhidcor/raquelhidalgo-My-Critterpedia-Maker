@@ -1,79 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Henny+Penny&family=Indie+Flower&family=Open+Sans:wght@300&family=Quantico&family=Taviraj:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Henny+Penny&family=Indie+Flower&family=Open+Sans:wght@300&family=Quantico&family=Taviraj:wght@100&display=swap");
 
 body {
   padding: 0px;
   font: 14px Comfortaa;
-  margin:0px;
+  margin: 0px;
   background-image: url("../images/background.jpeg");
 }
 
 /* navbar */
 
 .navbar {
-  background-color: rgb(174, 104,66);
+  background-color: rgb(174, 104, 66);
   font-size: 21px;
 }
 
-.nav-leaf{
+.nav-leaf {
   width: 70px;
   height: 50px;
 }
 
-
 /*  index home page */
 
-.index-text{
+.index-text {
   display: flex;
   text-align: center;
 }
 
-.home-img{
+.home-img {
   width: 400px;
   border-radius: 50px;
-
 }
 
-.buttons{
-	display:flex;
-	flex-direction: row;
+.buttons {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 50px;
 }
 
-.buttons  a {
-	border-radius: 50%;
-	text-decoration: none;
-  background-color: rgb(174, 104,66);
-	color: black;
-	font-size: 22px;
-	padding: 14px 14px;
-	box-shadow: 0px 0px 10px #0a0a0a4f;
-	margin: 10px;
+.buttons a {
+  border-radius: 50%;
+  text-decoration: none;
+  background-color: rgb(174, 104, 66);
+  color: black;
+  font-size: 22px;
+  padding: 14px 14px;
+  box-shadow: 0px 0px 10px #0a0a0a4f;
+  margin: 10px;
 }
 
-.logout-msg{
+.logout-msg {
   font-size: 20px;
 }
 
 /* login page & form */
 
-label{
+label {
   font-size: 20px;
 }
 
-.login-button{
+.login-button {
   border-radius: 50%;
-	text-decoration: none;
-  background-color: rgb(174, 104,66);
-	color: black;
+  text-decoration: none;
+  background-color: rgb(174, 104, 66);
+  color: black;
   font-size: 22px;
-	padding: 14px 14px;
-	box-shadow: 0px 0px 10px #0a0a0a4f;
-	margin: 10px;
+  padding: 14px 14px;
+  box-shadow: 0px 0px 10px #0a0a0a4f;
+  margin: 10px;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,15 +79,15 @@ label{
   padding-bottom: 100px;
 }
 
-.login-error{
+.login-error {
   font-size: 20px;
 }
 
-.canela{
+.canela {
   width: 320px;
 }
 
-.signup-link{
+.signup-link {
   text-decoration: none;
   color: black;
   font-weight: bolder;
@@ -105,7 +103,7 @@ label{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-} 
+}
 form {
   height: 70%;
   display: flex;
@@ -113,92 +111,86 @@ form {
   align-items: center;
 }
 form input {
-  margin:16px 0;
+  margin: 16px 0;
   padding: 0;
 }
 
-.signup-button{
+.signup-button {
   border-radius: 50%;
-	text-decoration: none;
-  background-color: rgb(174, 104,66);
-	color: black;
+  text-decoration: none;
+  background-color: rgb(174, 104, 66);
+  color: black;
   font-size: 22px;
-	padding: 14px 14px;
-	box-shadow: 0px 0px 10px #0a0a0a4f;
-	margin: 10px;
+  padding: 14px 14px;
+  box-shadow: 0px 0px 10px #0a0a0a4f;
+  margin: 10px;
 }
 
-.singup-error{
+.singup-error {
   font-size: 20px;
 }
 
-.signup-img{
+.signup-img {
   width: 300px;
   border-radius: 50px;
 }
 
-.login-link{
+.login-link {
   text-decoration: none;
   color: black;
   font-weight: bolder;
 }
 
-
-
 /* profile page */
 
-.profile-text{
+.profile-text {
   margin-top: -100px;
   text-align: center;
 }
 
-.profile-img{
+.profile-img {
   width: 300px;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 50px;
 }
 
-.profile-p-text{
+.profile-p-text {
   text-decoration: none;
-  color:black;
+  color: black;
   font-size: 22px;
 }
 
 /* critters page */
 
-.critters-page{
+.critters-page {
   display: flex;
-  align-items:flex-end;
+  align-items: flex-end;
   justify-content: space-around;
   margin-top: 200px;
 }
 
-.link-icons1{
+.link-icons1 {
   width: 120px;
-
 }
 
-.link-icons2{
+.link-icons2 {
   width: 90px;
-
 }
 
-.link-icons3{
+.link-icons3 {
   width: 80px;
-
 }
 
 /* fish page */
 
-
-.fish{
+.fish {
   margin-left: 30px;
 }
 
-.btn-creatures{
-  background-color: rgb(174, 104,66);
-}  
+.btn-creatures {
+  background-color: rgb(174, 104, 66);
+}
 
 .modal img {
   width: 100%;
@@ -213,11 +205,11 @@ form input {
   background-color: rgb(250, 247, 185);
 }
 
-.modal-header{
+.modal-header {
   background-color: rgb(250, 247, 185);
 }
 
-.modal-footer{
+.modal-footer {
   display: flex;
   justify-content: center;
   background-color: rgb(250, 247, 185);
@@ -225,27 +217,26 @@ form input {
 
 /* bugs page */
 
-.bug{
+.bug {
   margin-left: 30px;
 }
 
 /* sea page */
 
-.sea{
+.sea {
   margin-left: 30px;
 }
 
 /* catched and to catch pages */
-.card-deck{
+.card-deck {
   margin-top: 25px;
   width: 40%;
 }
 
-.card{
+.card {
   background-color: rgb(250, 247, 185);
 }
 
-.card-title{
+.card-title {
   text-align: center;
 }
-

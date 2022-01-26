@@ -1,56 +1,69 @@
-
 <div class="container">
-<h1> Catched Critters</h1>
+  <h1> Catched Critters</h1>
 
+  {{#each critters}}
 
-
-{{#each critters}}
-
-
-<div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" src={{image}} alt={{name}}>
-    <div class="card-body">
-      <h5 class="card-title">{{name}}</h5>
-      <div class="card-body text-center">
-      <button type="button" class="btn btn-creatures" data-toggle="modal" data-target="#{{this.id}}">
-        More info
-      </button>
-      </div>
-    <div class="card-footer">
-        <form method="POST" action="/catched/delete/{{id}}">
-        <button class="btn btn-creatures"type="submit" id="unFavButton">Remove critter</button>
-        </form> 
-    </div>
-  </div>
-</div>
-
-
-<!-- Modal -->
-  
-  <div class="modal fade black" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">{{name}}</h5>
-          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">   
-          <img src={{image}} alt="{{name}}">
-          <p> Location: {{location}}</p>
-          <p> Rarity: {{rarity}}</p>
-          <p> Price:  {{price}}</p>
-          <p> Museum phrase: {{museumPhrase}}</p>
-        </div>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src={{image}} alt={{name}} />
+        <div class="card-body">
+          <h5 class="card-title">{{name}}</h5>
+          <div class="card-body text-center">
+            <button
+              type="button"
+              class="btn btn-creatures"
+              data-toggle="modal"
+              data-target="#{{this.id}}"
+            >
+              More info
+            </button>
+          </div>
+          <div class="card-footer">
+            <form method="POST" action="/catched/delete/{{id}}">
+              <button
+                class="btn btn-creatures"
+                type="submit"
+                id="unFavButton"
+              >Remove critter</button>
+            </form>
+          </div>
         </div>
       </div>
+
+      <!-- Modal -->
+
+      <div
+        class="modal fade black"
+        id="{{id}}"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{{name}}</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src={{image}} alt="{{name}}" />
+              <p> Location: {{location}}</p>
+              <p> Rarity: {{rarity}}</p>
+              <p> Price: {{price}}</p>
+              <p> Museum phrase: {{museumPhrase}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div> 
-{{/each}}
-
-
-
+  {{/each}}
 
 </div>

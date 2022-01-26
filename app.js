@@ -24,7 +24,8 @@ const app = express();
 require("./config")(app);
 
 const projectName = "raquelhidalgo-My-Critterpedia-Maker";
-const capitalized = (string) => string[0].toUpperCase() + string.slice(1).toLowerCase();
+const capitalized = (string) =>
+  string[0].toUpperCase() + string.slice(1).toLowerCase();
 
 app.locals.title = `${capitalized(projectName)} created with IronLauncher`;
 
@@ -36,25 +37,25 @@ const auth = require("./routes/auth");
 app.use("/", auth);
 
 const critters = require("./routes/critters");
-app.use("/",critters)
+app.use("/", critters);
 
 const fish = require("./routes/fish");
-app.use("/",fish)
+app.use("/", fish);
 
 const bugs = require("./routes/bugs");
-app.use("/",bugs)
+app.use("/", bugs);
 
 const sea = require("./routes/seacreatures");
-app.use("/",sea)
+app.use("/", sea);
 
 const profile = require("./routes/profile");
-app.use("/",profile)
+app.use("/", profile);
 
 const catched = require("./routes/catched");
-app.use("/",catched)
+app.use("/", catched);
 
-const toCatch = require ("./routes/toCatch");
-app.use("/",toCatch)
+const toCatch = require("./routes/toCatch");
+app.use("/", toCatch);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
