@@ -2,9 +2,6 @@
 
 
 
-https://user-images.githubusercontent.com/90280742/151205954-b7916ab9-8757-4c0f-a50b-a98cafae370e.mov
-
-
 ---
 
 My Critterpedia Maker is a web created with ❤️  for all the animal crossing fans and my back-end project for the second module at Ironhack's Web Development bootcamp. The website is fully responsive so it can be open across all your devices pc, tablet or mobile phone. 
